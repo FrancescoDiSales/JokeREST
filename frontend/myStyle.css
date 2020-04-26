@@ -1,0 +1,19 @@
+body
+{
+  margin:0;
+  background-color:white;
+}
+
+.mainTitle
+{
+  padding:20px;
+  color:white;
+  text-align:center;
+}
+
+.image-clown
+{
+  padding-top: 50px;
+  height:45%
+
+}
