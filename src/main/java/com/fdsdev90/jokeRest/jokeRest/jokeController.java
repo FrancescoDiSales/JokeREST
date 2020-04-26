@@ -20,14 +20,14 @@ public class jokeController
     }
 
     @GetMapping("/joke/{type}")
-    public jokeModel[] getTypeJoke(@PathVariable("type") String typeJoke) throws Exception
+    public jokeModel[] getTypeJoke(@PathVariable("type") String typeJoke)
     {
         jokeService service = new jokeService();
         jokeModel [] resultJoke = service.getServiceJokeByType(typeJoke);
 
         if(resultJoke.length==0)
         {
-            throw new Exception();
+            return null;
         }
 
         return resultJoke;
