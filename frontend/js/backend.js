@@ -6,17 +6,29 @@ function checkJoke()
   let jokeType = $("#jokeType").val();
   console.log(jokeType);
 
-  fetch('http://localhost:8080/joke/'+jokeType,
-    {
-      headers:{'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*"}
-    }
-  ).then( response=>{
+  try
+  {
+      fetch('http://localhost:8080/joke/'+jokeType).then( response=> response.json()).then(
+        data=>{
+              setupJoke(data[0].setup,data[0].punchline);
+              });
 
-      console.log(response.json());
 
+  }
+  catch(exception)
+  {
 
-    });
+      setupJoke("Where is the punchline?","There is no punchline... (sorry an error happened)");
 
+  }
+
+}
+
+function setupJoke(setup,punchline)
+{
+
+  $("#Motivation").html(setup);
+  $("#pun").html(punchline);
 
 
 }
