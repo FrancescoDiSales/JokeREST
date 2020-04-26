@@ -4,7 +4,8 @@ function checkJoke()
 {
 
   let jokeType = $("#jokeType").val();
-  console.log(jokeType);
+
+  setupJoke("Drum rollings....","...");
 
   try
   {
