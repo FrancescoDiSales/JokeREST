@@ -20,7 +20,7 @@ public class jokeController
         return resultJoke;
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "*")
     @GetMapping("/joke/{type}")
     public jokeModel[] getTypeJoke(@PathVariable("type") String typeJoke)
     {
