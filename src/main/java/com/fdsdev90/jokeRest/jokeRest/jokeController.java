@@ -2,6 +2,7 @@ package com.fdsdev90.jokeRest.jokeRest;
 
 import com.fdsdev90.jokeRest.model.jokeModel;
 import com.fdsdev90.jokeRest.service.jokeService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ public class jokeController
         return resultJoke;
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/joke/{type}")
     public jokeModel[] getTypeJoke(@PathVariable("type") String typeJoke)
     {
