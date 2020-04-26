@@ -2,8 +2,8 @@ package com.fdsdev90.jokeRest.jokeRest;
 
 import com.fdsdev90.jokeRest.model.jokeModel;
 import com.fdsdev90.jokeRest.service.jokeService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -19,5 +19,18 @@ public class jokeController
         return resultJoke;
     }
 
+    @GetMapping("/joke/{type}")
+    public jokeModel[] getTypeJoke(@PathVariable("type") String typeJoke) throws Exception
+    {
+        jokeService service = new jokeService();
+        jokeModel [] resultJoke = service.getServiceJokeByType(typeJoke);
+
+        if(resultJoke.length==0)
+        {
+            throw new Exception();
+        }
+
+        return resultJoke;
+    }
 
 }
