@@ -6,22 +6,22 @@ public class jokeModel
     String setup;
     String punchline;
 
-    void setSetup(String setup)
+    public void setSetup(String setup)
     {
         this.setup = setup;
     }
 
-    String getSetup()
+    public String getSetup()
     {
         return setup;
     }
 
-    void setPunchline(String punchline)
+    public void setPunchline(String punchline)
     {
         this.punchline = punchline;
     }
 
-    String getPunchline()
+    public String getPunchline()
     {
         return punchline;
     }

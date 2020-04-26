@@ -11,10 +11,10 @@ public class jokeController
 {
 
     @GetMapping("/random")
-    public ResponseEntity<jokeModel> getJoke()
+    public jokeModel getJoke()
     {
         jokeService service = new jokeService();
-        ResponseEntity<jokeModel> resultJoke = service.serviceJoke();
+        jokeModel resultJoke = service.serviceJoke();
 
         return resultJoke;
     }
