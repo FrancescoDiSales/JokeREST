@@ -24,37 +24,41 @@
     <img src="./img/clown.png" class="image-clown">
   </div>
 
-<div style="padding-top:20px;"class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Category</span>
+    <div class="text-center category-text"> <h1>Check the category </h1> </div>
+  
+  <div class="text-center">
+      
+  <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle combo-button-personal" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Categories
+  </a>
+
+    <div class="dropdown-menu drop-down-content" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" id="jokeType" onclick="checkJoke()" href="#">General</a>
+        <a class="dropdown-item" id="jokeType" onclick="checkJoke()" href="#">Programming</a>
+        <a class="dropdown-item" id="jokeType" onclick="checkJoke()" href="#">knock-knock</a>
+    </div>
+          
   </div>
-
-    <input id="jokeType" type="text" class="form-control" placeholder="insert a category here" aria-label="jokeType" aria-describedby="basic-addon1">
-
+      
 </div>
 
-  <!-- Button trigger modal -->
-  <div class="text-center">
-  <button type="button" class="btn btn-dark" onclick="checkJoke()" data-toggle="modal" data-target="#jokeModal">
-    Search for the joke
-  </button>
-  </div>
-<!-- Modal -->
 <div class="modal fade" id="jokeModal" tabindex="-1" role="dialog" aria-labelledby="jokeModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+        
       <div class="modal-header">
         <h5 class="modal-title" id="Motivation">Drum rollings....</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-
-        </button>
       </div>
+        
       <div class="modal-body" id="pun">
         ...
       </div>
+        
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
      </div>
+        
     </div>
   </div>
 </div>
