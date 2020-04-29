@@ -3,15 +3,22 @@
 function checkJoke(jokeType)
 {
   
-  $("#jokeModal").modal('show');
-  setupJoke("Drum rollings....","...");
-
+  
  
-      fetch('http://localhost:8080/joke/'+jokeType).then( response=> response.json()).then(
+      fetch('http://localhost:8080/joke/'+jokeType).then( response=> response.json()).catch(
+
+        (error)=>{
+            
+            $("#alertRest").show();
+        }
+
+    ).then(
         data=>{
               setupJoke(data[0].setup,data[0].punchline);
-              });
+              $("#jokeModal").modal('show');
+             
 
+              })
 
 }
 

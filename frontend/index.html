@@ -16,16 +16,23 @@
 	  </head>
 
 <body>
+
 <nav style="background-color:#4f4e4e">
 	<h1 class="mainTitle">JokeREST</h1>
 </nav>
 
+<div class="alert alert-danger .alert-dismissible" style="display:none;" id="alertRest" role="alert">
+  Where's the punchline? There's no punchline... (sorry an error happened)
+  <button type="button" class="close" onclick="$('#alertRest').hide();" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+ </div>
+ 
   <div class="text-center">
     <img src="./img/clown.png" class="image-clown">
   </div>
 
     <div class="text-center category-text"> <h1>Check the category </h1> </div>
-  
+
   <div class="text-center">
       
   <div class="dropdown">
@@ -33,6 +40,7 @@
     Categories
   </a>
 
+  
     <div class="dropdown-menu drop-down-content" aria-labelledby="dropdownMenuLink">
         <a class="dropdown-item" onclick="checkJoke('general')" href="#">General</a>
         <a class="dropdown-item" onclick="checkJoke('programming')" href="#">Programming</a>
@@ -42,6 +50,7 @@
   </div>
       
 </div>
+
 
 <div class="modal fade" id="jokeModal" tabindex="-1" role="dialog" aria-labelledby="jokeModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -61,7 +70,11 @@
         
     </div>
   </div>
+
+
 </div>
+
+
 
 </body>
 </html>
