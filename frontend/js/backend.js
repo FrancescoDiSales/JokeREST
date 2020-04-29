@@ -1,10 +1,8 @@
 
 
-function checkJoke()
+function checkJoke(jokeType)
 {
-
-  let jokeType = $("#jokeType").html().toLowerCase();
-
+  
   $("#jokeModal").modal('show');
   setupJoke("Drum rollings....","...");
 
